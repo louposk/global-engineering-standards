@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+
+# Build outputs
+build/
+dist/
+.docusaurus/
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Logs
+*.log
+logs/
+
+# Cache
+.cache/
+.npm/
+.yarn/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporary files
+*.tmp
+*.temp
