@@ -1,11 +1,79 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 5rem 0;
   width: 100%;
+  background: #f8fafc;
 }
 
 .featureSvg {
-  height: 200px;
-  width: 200px;
+  height: 180px;
+  width: 180px;
+  transition: transform 0.3s ease;
+}
+
+.featureCard {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  height: 100%;
+  border: 1px solid rgba(99, 179, 237, 0.1);
+}
+
+.featureCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.featureCard:hover .featureSvg {
+  transform: scale(1.05);
+}
+
+.featureCard h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+}
+
+.featureCard p {
+  color: #718096;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.featureIcon {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.featureIcon::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #667eea20, #764ba220);
+  border-radius: 50%;
+  z-index: -1;
+}
+
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 3rem 0;
+  }
+  
+  .featureCard {
+    margin-bottom: 2rem;
+    padding: 2rem 1.25rem;
+  }
+  
+  .featureSvg {
+    height: 150px;
+    width: 150px;
+  }
 }

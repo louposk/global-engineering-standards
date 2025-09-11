@@ -6,25 +6,177 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #667eea;
+  --ifm-color-primary-dark: #4c63e8;
+  --ifm-color-primary-darker: #3d54e6;
+  --ifm-color-primary-darkest: #2d3db3;
+  --ifm-color-primary-light: #8099ec;
+  --ifm-color-primary-lighter: #94aaee;
+  --ifm-color-primary-lightest: #c2d1f5;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-heading-font-weight: 700;
+  --ifm-font-size-base: 16px;
+  --ifm-line-height-base: 1.7;
+  --ifm-spacing-horizontal: 1rem;
+  --ifm-navbar-shadow: 0 4px 28px rgba(0,0,0,0.1);
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-md: 0 5px 40px rgba(0, 0, 0, 0.2);
+  --ifm-global-shadow-tl: 0 12px 28px 0 rgba(0, 0, 0, 0.2);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #8099ec;
+  --ifm-color-primary-dark: #6583ea;
+  --ifm-color-primary-darker: #5777e9;
+  --ifm-color-primary-darkest: #2d47d9;
+  --ifm-color-primary-light: #9bafee;
+  --ifm-color-primary-lighter: #a9bdff;
+  --ifm-color-primary-lightest: #d4ddff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Import Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* Global improvements */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Navbar improvements */
+.navbar {
+  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+[data-theme='dark'] .navbar {
+  background-color: rgba(24, 25, 26, 0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.navbar__title {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Button improvements */
+.button {
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+/* Card improvements */
+.card {
+  border: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Content improvements */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.markdown h1 {
+  font-size: 2.5rem;
+}
+
+.markdown h2 {
+  font-size: 2rem;
+  margin-top: 3rem;
+}
+
+/* Code block improvements */
+.prism-code {
+  border-radius: 12px;
+}
+
+/* Sidebar improvements */
+.theme-doc-sidebar-container {
+  border-right: 1px solid rgba(0,0,0,0.05);
+}
+
+[data-theme='dark'] .theme-doc-sidebar-container {
+  border-right: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Footer improvements */
+.footer {
+  background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+  color: white;
+}
+
+.footer__title {
+  color: white;
+}
+
+.footer__item {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer__item:hover {
+  color: white;
+}
+
+/* Breadcrumbs improvements */
+.breadcrumbs__item--active .breadcrumbs__link {
+  color: var(--ifm-color-primary);
+}
+
+/* Table of contents improvements */
+.table-of-contents {
+  border-left: 3px solid var(--ifm-color-primary-lightest);
+  padding-left: 1rem;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .navbar__title {
+    font-size: 1.1rem;
+  }
+  
+  .markdown h1 {
+    font-size: 2rem;
+  }
+  
+  .markdown h2 {
+    font-size: 1.75rem;
+  }
 }
