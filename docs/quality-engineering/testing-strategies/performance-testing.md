@@ -117,8 +117,8 @@ export let options = {
     { duration: '5m', target: 0 },   // Ramp-down
   ],
   thresholds: {
-    'http_req_duration': ['p(95)<500'], // 95% of requests under 500ms
-    'http_req_failed': ['rate<0.01'],   // Error rate under 1%
+    'http_req_duration': ['p(95)&lt;500'], // 95% of requests under 500ms
+    'http_req_failed': ['rate&lt;0.01'],   // Error rate under 1%
   },
 };
 

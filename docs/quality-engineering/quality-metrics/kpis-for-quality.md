@@ -20,19 +20,19 @@ Quality KPIs serve multiple purposes:
 **Defect Density**
 - **Definition**: Number of defects per unit of code (e.g., per KLOC)
 - **Formula**: Total Defects / Size of Software (KLOC)
-- **Target**: <2-3 defects per KLOC for mature products
+- **Target**: &lt;2-3 defects per KLOC for mature products
 - **Use Case**: Measure code quality and predict maintenance effort
 
 **Defect Escape Rate**
 - **Definition**: Percentage of defects found in production vs. total defects
 - **Formula**: (Production Defects / Total Defects) × 100
-- **Target**: <5-10% escape rate
+- **Target**: &lt;5-10% escape rate
 - **Use Case**: Evaluate testing effectiveness
 
 **Defect Leakage**
 - **Definition**: Defects found in later phases that should have been caught earlier
 - **Formula**: (Phase N Defects / Total Phase N-1 Defects) × 100
-- **Target**: <10% leakage between phases
+- **Target**: &lt;10% leakage between phases
 - **Use Case**: Assess phase-wise quality gates
 
 **Critical Defect Density**
@@ -51,7 +51,7 @@ Quality KPIs serve multiple purposes:
 **Mean Time to Recovery (MTTR)**
 - **Definition**: Average time to restore service after failure
 - **Formula**: Total Recovery Time / Number of Incidents
-- **Target**: <2-4 hours for business-critical systems
+- **Target**: &lt;2-4 hours for business-critical systems
 - **Use Case**: Measure operational efficiency
 
 **System Availability**
@@ -84,7 +84,7 @@ Quality KPIs serve multiple purposes:
 **Rework Rate**
 - **Definition**: Percentage of effort spent on fixing defects vs. new development
 - **Formula**: (Rework Effort / Total Effort) × 100
-- **Target**: <20%
+- **Target**: &lt;20%
 - **Use Case**: Assess development efficiency
 
 #### Testing Effectiveness
@@ -129,7 +129,7 @@ Quality KPIs serve multiple purposes:
 
 **Customer Complaint Rate**
 - **Definition**: Number of quality-related complaints per time period
-- **Target**: <5% of customer interactions
+- **Target**: &lt;5% of customer interactions
 - **Use Case**: Identify quality issues affecting customers
 
 #### Usage and Performance
@@ -267,13 +267,13 @@ Quality KPIs serve multiple purposes:
 
 ### Web Applications
 - **Availability**: 99.9% minimum
-- **Response Time**: <2 seconds for 95% of requests
-- **Error Rate**: <0.1% of requests
+- **Response Time**: &lt;2 seconds for 95% of requests
+- **Error Rate**: &lt;0.1% of requests
 
 ### Mobile Applications
-- **Crash Rate**: <1% of sessions
+- **Crash Rate**: &lt;1% of sessions
 - **App Store Rating**: >4.0/5.0
-- **Load Time**: <3 seconds
+- **Load Time**: &lt;3 seconds
 
 ## Getting Started Checklist
 

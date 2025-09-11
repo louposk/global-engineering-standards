@@ -549,9 +549,9 @@ const logger = {
 - Performance regressions MUST be detected and addressed
 
 **Performance Targets:**
-- Web pages: <3 seconds load time
-- API endpoints: <500ms response time (95th percentile)
-- Database queries: <100ms execution time (95th percentile)
+- Web pages: &lt;3 seconds load time
+- API endpoints: &lt;500ms response time (95th percentile)
+- Database queries: &lt;100ms execution time (95th percentile)
 
 ### Scalability Standards
 

@@ -669,9 +669,9 @@ export const options = {
     { duration: '2m', target: 0 },    // Ramp down
   ],
   thresholds: {
-    http_req_duration: ['p(95)<500'],  // 95% of requests under 500ms
-    http_req_failed: ['rate<0.1'],     // Error rate under 10%
-    errors: ['rate<0.1'],              // Custom error rate under 10%
+    http_req_duration: ['p(95)&lt;500'],  // 95% of requests under 500ms
+    http_req_failed: ['rate&lt;0.1'],     // Error rate under 10%
+    errors: ['rate&lt;0.1'],              // Custom error rate under 10%
   },
 };
 

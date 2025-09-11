@@ -72,7 +72,7 @@ Code quality metrics serve several important purposes:
 #### Maintainability Index
 - **Calculation**: Based on complexity, LOC, and comment ratio
 - **Scale**: 0-100, higher is better
-- **Thresholds**: >20 maintainable, 10-20 moderate, <10 difficult
+- **Thresholds**: >20 maintainable, 10-20 moderate, &lt;10 difficult
 
 ## Monitoring Tools and Platforms
 
