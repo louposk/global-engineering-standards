@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - Global Engineering Standards</title>
+    <meta name="description" content="The page you're looking for couldn't be found. Redirecting to Global Engineering Standards documentation.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="./img/favicon.ico">
+    
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 600px;
+            padding: 2rem;
+        }
+        
+        .error-icon {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            backdrop-filter: blur(10px);
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-weight: 500;
+        }
+        
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .button {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.9);
+            color: #4a5568;
+            padding: 12px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .button:hover {
+            background: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .button--outline {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.8);
+        }
+        
+        .button--outline:hover {
+            background: white;
+            color: #4a5568;
+            border-color: white;
+        }
+        
+        .redirect-info {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin: 2rem 0;
+            backdrop-filter: blur(10px);
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            h2 {
+                font-size: 1.3rem;
+            }
+            .container {
+                padding: 1rem;
+            }
+            .buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-icon">🔍</div>
+        <h1>404</h1>
+        <h2>Page Not Found</h2>
+        <p>The page you're looking for doesn't exist or has been moved.</p>
+        
+        <div class="redirect-info">
+            <p><strong>Looking for the documentation?</strong> You'll be redirected to the main site in a few seconds.</p>
+        </div>
+        
+        <div class="buttons">
+            <a href="./" class="button">
+                🏠 Go to Homepage
+            </a>
+            <a href="./docs/intro" class="button button--outline">
+                📚 View Documentation
+            </a>
+        </div>
+        
+        <script>
+            // Auto-redirect to main site after 3 seconds
+            setTimeout(function() {
+                window.location.href = './';
+            }, 3000);
+            
+            // Handle specific common routes
+            const path = window.location.pathname;
+            if (path.includes('/docs')) {
+                // If it looks like a docs route, try to redirect there
+                setTimeout(function() {
+                    window.location.href = './docs/intro';
+                }, 2000);
+            } else if (path.includes('/blog')) {
+                // If it looks like a blog route, redirect to blog
+                setTimeout(function() {
+                    window.location.href = './blog';
+                }, 2000);
+            }
+        </script>
+    </div>
+</body>
+</html>
